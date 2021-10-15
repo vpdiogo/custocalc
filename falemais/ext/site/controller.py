@@ -46,8 +46,8 @@ def calculate_without_plan(origin, destination, time):
             value = item["value"] * time
 
             return currency(value)
-        else:
-            return "-"
+        
+    return "-"
 
 def calculate_plan_30(origin, destination, time):
 
@@ -58,8 +58,7 @@ def calculate_plan_30(origin, destination, time):
                 return currency(value)
             else:
                 return 0
-        else:
-            return "-"
+    return "-"
 
 def calculate_plan_60(origin, destination, time):
 
@@ -70,8 +69,7 @@ def calculate_plan_60(origin, destination, time):
                 return currency(value)
             else:
                 return 0
-        else:
-            return "-"
+    return "-"
 
 def calculate_plan_120(origin, destination, time):
 
@@ -82,5 +80,4 @@ def calculate_plan_120(origin, destination, time):
                 return currency(value)
             else:
                 return 0
-        else:
-            return "-"
+    return "-"
