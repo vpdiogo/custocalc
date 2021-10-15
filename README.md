@@ -56,7 +56,7 @@ make test
 ```
 
 ## Execute 
-For initialize the application, inside directorie from app.py:
+For initialize the application, inside directory from app.py:
 
 ```
 export FLASK_ENV=development
