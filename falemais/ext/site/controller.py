@@ -4,9 +4,10 @@ from .models import rate_values
 
 
 def currency(value):
-    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+    locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
     value = locale.currency(value, grouping=True, symbol=None)
     return value
+
 
 def calculate_without_plan(origin, destination, time):
 
@@ -15,8 +16,9 @@ def calculate_without_plan(origin, destination, time):
             value = item["value"] * time
 
             return currency(value)
-        
+
     return "-"
+
 
 def calculate_plan_30(origin, destination, time):
 
@@ -29,6 +31,7 @@ def calculate_plan_30(origin, destination, time):
                 return 0
     return "-"
 
+
 def calculate_plan_60(origin, destination, time):
 
     for item in rate_values:
@@ -39,6 +42,7 @@ def calculate_plan_60(origin, destination, time):
             else:
                 return 0
     return "-"
+
 
 def calculate_plan_120(origin, destination, time):
 
