@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FaleMais</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+
+<body>
+    <section class="section">
+
+        <div class="container">
+            <h1 class="title">
+                FaleMais
+            </h1>
+            <p class="subtitle">
+                Calcule os valores das ligações e compare os planos <strong>FaleMais</strong>!
+            </p>
+        </div>
+        <hr>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}.
+            </div>
+        {% endif %}
+        {% endwith %}
+
+        <form action="/" class="form" method="POST">
+            <div class="field">
+                <label class="label">Código da cidade de origem:</label>
+                <div class="control">
+                    <div class="select">
+                        <select name="origin">
+                            <option></option>
+                            <option>011</option>
+                            <option>016</option>
+                            <option>017</option>
+                            <option>018</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Código da cidade de destino:</label>
+                <div class="control">
+                    <div class="select">
+                        <select name="destiny">
+                            <option></option>
+                            <option>011</option>
+                            <option>016</option>
+                            <option>017</option>
+                            <option>018</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Informe o tempo da ligação (em minutos):</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="5" name="time">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Escolha o plano:</label>
+                <div class="control">
+                    <div class="select">
+                        <select name="plan">
+                            <option></option>
+                            <option>FaleMais 30</option>
+                            <option>FaleMais 60</option>
+                            <option>FaleMais 120</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button type="submit" class="button is-link">Calcular</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="table is-bordered">
+                    <tr>
+                        <th>Origem</th>
+                        <th>Destino</th>
+                        <th>Tempo</th>
+                        <th>Plano FaleMais</th>
+                        <th>Com FaleMais</th>
+                        <th>Sem FaleMais</th>
+                    </tr>
+                    <tr>
+                        <td>{{ data_input[0] }}</td>
+                        <td>{{ data_input[1] }}</td>
+                        <td>{{ data_input[2] }}</td>
+                        <td>{{ data_input[3] }}</td>
+                        <td>R$ {{ data[1] }}</td>
+                        <td>R$ {{ data[0] }}</td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
