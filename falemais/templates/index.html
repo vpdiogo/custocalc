@@ -16,69 +16,80 @@
                 FaleMais
             </h1>
             <p class="subtitle">
-                Calcule os valores das ligações e compare os planos <strong>FaleMais</strong>!
+                Calcule o custo das chamadas e compare os planos <strong>FaleMais</strong>!
             </p>
         </div>
         <hr>
 
         {% with messages = get_flashed_messages() %}
         {% if messages %}
-            <div class="notification is-danger">
-                {{ messages[0] }}.
-            </div>
+        <div class="notification is-danger">
+            {{ messages[0] }}.
+        </div>
         {% endif %}
         {% endwith %}
 
         <form action="/" class="form" method="POST">
-            <div class="field">
-                <label class="label">Código da cidade de origem:</label>
-                <div class="control">
-                    <div class="select">
-                        <select name="origin">
-                            <option></option>
-                            <option>011</option>
-                            <option>016</option>
-                            <option>017</option>
-                            <option>018</option>
-                        </select>
+            <div class="columns">
+                <div class="column">
+                <div class="field">
+                    <label class="label">Código da cidade de origem:</label>
+                    <div class="control">
+                        <div class="select">
+                            <select name="origin">
+                                <option></option>
+                                <option>011</option>
+                                <option>016</option>
+                                <option>017</option>
+                                <option>018</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="field">
-                <label class="label">Código da cidade de destino:</label>
-                <div class="control">
-                    <div class="select">
-                        <select name="destiny">
-                            <option></option>
-                            <option>011</option>
-                            <option>016</option>
-                            <option>017</option>
-                            <option>018</option>
-                        </select>
+            <div class="column">
+                <div class="field">
+                    <label class="label">Código da cidade de destino:</label>
+                    <div class="control">
+                        <div class="select">
+                            <select name="destiny">
+                                <option></option>
+                                <option>011</option>
+                                <option>016</option>
+                                <option>017</option>
+                                <option>018</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="field">
-                <label class="label">Informe o tempo da ligação (em minutos):</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="5" name="time">
+            <div class="column">
+                <div class="field">
+                    <label class="label">Duração da chamada (min):</label>
+                    <div class="control">
+                        <input class="input" type="text" style="width: 33%;" placeholder="5" name="time">
+                    </div>
                 </div>
             </div>
 
-            <div class="field">
-                <label class="label">Escolha o plano:</label>
-                <div class="control">
-                    <div class="select">
-                        <select name="plan">
-                            <option></option>
-                            <option>FaleMais 30</option>
-                            <option>FaleMais 60</option>
-                            <option>FaleMais 120</option>
-                        </select>
+            <div class="column">
+                <div class="field">
+                    <label class="label">Escolha o plano:</label>
+                    <div class="control">
+                        <div class="select">
+                            <select name="plan">
+                                <option></option>
+                                <option>FaleMais 30</option>
+                                <option>FaleMais 60</option>
+                                <option>FaleMais 120</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
+            </div>
+
             </div>
 
             <div class="field is-grouped">
@@ -87,25 +98,28 @@
                 </div>
             </div>
 
-            <div class="table-container">
-                <table class="table is-bordered">
-                    <tr>
-                        <th>Origem</th>
-                        <th>Destino</th>
-                        <th>Tempo</th>
-                        <th>Plano FaleMais</th>
-                        <th>Com FaleMais</th>
-                        <th>Sem FaleMais</th>
-                    </tr>
-                    <tr>
-                        <td>{{ data_input[0] }}</td>
-                        <td>{{ data_input[1] }}</td>
-                        <td>{{ data_input[2] }}</td>
-                        <td>{{ data_input[3] }}</td>
-                        <td>R$ {{ data[1] }}</td>
-                        <td>R$ {{ data[0] }}</td>
-                    </tr>
-                </table>
+            <hr>
+
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title is-6">Origem:</h1> {{ data_input[0] }}
+                </div>
+                <div class="column">
+                    <h1 class="title is-6">Destino:</h1> {{ data_input[1] }}
+                </div>
+                <div class="column">
+                    <h1 class="title is-6">Tempo (min):</h1> {{ data_input[2] }}
+                </div>
+                <div class="column">
+                    <h1 class="title is-6">Plano FaleMais:</h1> {{ data_input[3] }}
+                </div>
+                <div class="column">
+                    <h1 class="title is-6">Com FaleMais:</h1> R$ {{ data[1] }}
+                </div>
+                <div class="column">
+                    <h1 class="title is-6">Sem FaleMais:</h1> R$ {{ data[0] }}
+                </div>
+
             </div>
         </form>
     </section>
