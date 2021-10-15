@@ -1,4 +1,6 @@
-from falemais.ext.site.controller import calculate_plan_120, calculate_plan_30, calculate_plan_60, calculate_without_plan
+from falemais.ext.site.controller import (calculate_plan_30, calculate_plan_60,
+                                          calculate_plan_120,
+                                          calculate_without_plan)
 
 
 def test_app_is_created(app):

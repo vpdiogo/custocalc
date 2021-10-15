@@ -1,5 +1,7 @@
 import locale
+
 from .models import rate_values
+
 
 def currency(value):
     locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')

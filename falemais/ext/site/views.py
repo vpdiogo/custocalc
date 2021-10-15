@@ -1,14 +1,7 @@
-from .controller import calculate_without_plan, calculate_plan_30, calculate_plan_60, calculate_plan_120
-from flask import (
-    Blueprint,
-    app,
-    current_app,
-    flash,
-    redirect,
-    render_template,
-    request,
-    url_for,
-)
+from flask import Blueprint, flash, redirect, render_template, request
+
+from .controller import (calculate_plan_30, calculate_plan_60,
+                         calculate_plan_120, calculate_without_plan)
 
 site = Blueprint("site", __name__)
 

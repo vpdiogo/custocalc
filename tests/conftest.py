@@ -1,5 +1,4 @@
 import pytest
-
 from falemais.app import create_app
 
 
