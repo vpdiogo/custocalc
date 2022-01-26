@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FaleMais</title>
+    <title>CustoCalc</title>
     <link rel="stylesheet" href="../static/css/main.css">
 </head>
 
@@ -13,10 +13,10 @@
 
         <div class="container">
             <h1 class="title">
-                FaleMais
+                CustoCalc
             </h1>
             <p class="subtitle">
-                Calcule o custo das chamadas e compare os planos <strong>FaleMais</strong>!
+                Calcule o custo das chamadas e compare os planos <strong>CustoCalc</strong>!
             </p>
         </div>
         <hr>
@@ -39,9 +39,9 @@
                             <select name="origin">
                                 <option></option>
                                 <option>011</option>
-                                <option>016</option>
-                                <option>017</option>
-                                <option>018</option>
+                                <option>027</option>
+                                <option>028</option>
+                                <option>031</option>
                             </select>
                         </div>
                     </div>
@@ -56,9 +56,9 @@
                             <select name="destiny">
                                 <option></option>
                                 <option>011</option>
-                                <option>016</option>
-                                <option>017</option>
-                                <option>018</option>
+                                <option>027</option>
+                                <option>028</option>
+                                <option>031</option>
                             </select>
                         </div>
                     </div>
@@ -81,9 +81,9 @@
                         <div class="select">
                             <select name="plan">
                                 <option></option>
-                                <option>FaleMais 30</option>
-                                <option>FaleMais 60</option>
-                                <option>FaleMais 120</option>
+                                <option>Plano 30</option>
+                                <option>Plano 60</option>
+                                <option>Plano 120</option>
                             </select>
                         </div>
                     </div>
@@ -111,13 +111,13 @@
                     <h1 class="title is-6">Tempo (min):</h1> {{ data_input[2] }}
                 </div>
                 <div class="column">
-                    <h1 class="title is-6">Plano FaleMais:</h1> {{ data_input[3] }}
+                    <h1 class="title is-6">Plano:</h1> {{ data_input[3] }}
                 </div>
                 <div class="column">
-                    <h1 class="title is-6">Com FaleMais:</h1> R$ {{ data[1] }}
+                    <h1 class="title is-6">Com Plano:</h1> R$ {{ data[1] }}
                 </div>
                 <div class="column">
-                    <h1 class="title is-6">Sem FaleMais:</h1> R$ {{ data[0] }}
+                    <h1 class="title is-6">Sem Plano:</h1> R$ {{ data[0] }}
                 </div>
 
             </div>

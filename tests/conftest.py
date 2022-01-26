@@ -1,5 +1,5 @@
 import pytest
-from falemais.app import create_app
+from custocalc.app import create_app
 
 
 @pytest.fixture(scope="module")

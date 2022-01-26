@@ -1,6 +1,6 @@
 from flask import Flask
 
-from falemais.ext import config
+from custocalc.ext import config
 
 
 def create_app():
