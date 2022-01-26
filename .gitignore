@@ -6,6 +6,6 @@ __pycache__/
 
 .coverage
 
-falemais.egg-info/
+custocalc.egg-info/
 
 **/*.secrets.*
