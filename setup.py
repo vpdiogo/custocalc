@@ -6,7 +6,7 @@ def read(filename):
 
 
 setup(
-    name="falemais",
+    name="custocalc",
     version="0.1.0",
     description="Project app to calculate the value of phone calls",
     packages=find_packages(),

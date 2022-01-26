@@ -34,15 +34,15 @@ def index():
             calculate_without_plan(int(origin), int(destination), int(time))
         )
 
-        if plan == "FaleMais 30":
+        if plan == "Plano 30":
             plan_value.append(
                 calculate_plan_30(int(origin), int(destination), int(time))
             )
-        if plan == "FaleMais 60":
+        if plan == "Plano 60":
             plan_value.append(
                 calculate_plan_60(int(origin), int(destination), int(time))
             )
-        if plan == "FaleMais 120":
+        if plan == "Plano 120":
             plan_value.append(
                 calculate_plan_120(int(origin), int(destination), int(time))
             )

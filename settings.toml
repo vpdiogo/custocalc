@@ -1,7 +1,7 @@
 [default]
 DEBUG = false
 EXTENSIONS = [
-    "falemais.ext.site:init_app",
+    "custocalc.ext.site:init_app",
     
 ]
 
@@ -10,7 +10,7 @@ DEBUG = true
 DEBUG_TB_TEMPLATE_EDITOR_ENABLED = true
 DEBUG_TB_INTERCEPT_REDIRECTS = false
 EXTENSIONS = [
-    "falemais.ext.site:init_app",
+    "custocalc.ext.site:init_app",
 
 ]
 

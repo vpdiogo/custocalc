@@ -1,4 +1,4 @@
-from falemais.ext.site.controller import (
+from custocalc.ext.site.controller import (
     calculate_plan_30,
     calculate_plan_60,
     calculate_plan_120,
@@ -7,7 +7,7 @@ from falemais.ext.site.controller import (
 
 
 def test_app_is_created(app):
-    assert app.name == "falemais.app"
+    assert app.name == "custocalc.app"
 
 
 def test_config_is_loaded(config):
