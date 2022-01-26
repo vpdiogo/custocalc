@@ -7,10 +7,10 @@ This project consists of a phone call rate simulator system. The page shows a li
 Create a directorie to the project:
 
 ```
-mkdir falemais-project
+mkdir custocalc-project
 ```
 
-Inside 'falemais-project', install a virtual environment and initialize it:
+Inside 'custocalc-project', install a virtual environment and initialize it:
 
 Lunix or Mac
 ```
@@ -26,13 +26,13 @@ py -m venv env
 Download repositorie:
 
 ```
-git clone https://github.com/vpdiogo/falemais.git
+git clone https://github.com/vpdiogo/custocalc.git
 ```
 
 Install dependencies:
 
 ```
-cd falemais
+cd custocalc
 make install
 ```
 
